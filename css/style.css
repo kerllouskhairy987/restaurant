@@ -1,0 +1,630 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+}
+:root{
+    --Primary:#FED049;
+    --Secondary:#007580;
+    --Red:#E01B24;
+    --Grey:#FAFAFA;
+    --Black:#000000;
+}
+/* Strat Header */
+.navbar{
+    position: fixed;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(235,236,240,.9);
+}
+.navbar .container-fluid .navbar-brand{
+    display: flex;
+    align-items: center;
+}
+.navbar .container-fluid .navbar-brand img{
+    margin-left: 50px;
+    width:50px ;height:52px, 
+}
+.navbar-nav{
+    position: absolute;
+    right: 10px;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.links{
+    display: flex;
+    font-size: 18px;
+    background-color: rgba(8, 119, 4, 0.253);
+    cursor: pointer;
+    border-radius: 22px;
+}
+.links li{
+    list-style: none;
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.links li a{
+    text-decoration: none;
+}
+.sign_up{
+    flex: 1;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(8, 119, 4, 0.877);
+    border-radius: 22px;
+    color: white;
+    padding: 0px 10px;
+}
+.sign_in{
+    padding: 0px 10px 0px 0px;
+}
+.sign_in a{
+    color: black;
+}
+.sign_in a:hover{
+    color: white;
+}
+.collapse .navbar-nav #afterLinks .i{
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* ==================== */
+.setting{
+    /* display: flex; */
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 0px;
+    display: none;
+}
+.setting .icon{
+    font-size: 23px;
+    cursor: pointer;
+}
+.shoppingIcon{
+    position: relative;
+    display: block;
+}
+.setting li span{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    transform: translate(23px , -5px);
+    background-color: var(--Red);
+    border-radius: 50%;
+    color: var(--Grey);
+    max-height: 22px;
+    min-width: 22px;
+    text-align: center;
+    font-size: 13px;
+}
+.setting li.options p{
+    display: none;
+}
+.setting li p#logout{
+    /* display: none; */
+    cursor: pointer;
+}
+/* End Header */
+/* Start Login and register */
+.all{
+    background-image: url(../images/contact.jpeg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    color:black;
+    position: fixed;
+    width: 100%;
+}
+.LOHIN ,.REGISTER{
+    width: 400px;
+    margin:140px auto;
+    border: #ddd;
+    background-color:rgba(223, 219, 219, 0.589);
+    padding-top: 50px;
+    border-radius: 22px;
+}
+.LOHIN a ,.REGISTER a{
+    text-decoration: none;
+    color: rgb(8, 0, 248);
+}
+.LOHIN h2 ,.REGISTER h2{
+    padding-bottom: 6px;
+    text-align: center;
+}
+.userBox , .passwordBox ,.emailbox{
+    width: 80%;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    width: 80%;
+    margin: 40px auto;
+   
+}
+.userBox label , .passwordBox label ,.emailbox label{
+    position: absolute;
+    top: -19px;
+}
+.userBox input , .passwordBox input ,.emailbox input{
+    width: 90%;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+.userBox input:focus ,.passwordBox input:focus ,.emailbox input:focus{
+   outline: none;
+}
+/* input:focus~.labeluser{
+    top: -5px;
+} */
+.userBox i ,.passwordBox i ,.emailbox i{
+    position: absolute;
+    transform:translate(10px , 5px) ;
+    
+}
+.remmber_forgit ,.register_link{
+    margin-left: 10%;
+}
+.register_link{
+    padding-bottom: 30px;
+}
+#submit{
+    width: 80%;
+    padding: 5px;
+    display: block;
+    border-radius:10px ;
+    margin: 12px auto;
+    border: none;
+    font-size: 20px;
+}
+/* End Login and register */
+/* Start article */
+article .article{
+    z-index: 10000;
+    position: absolute;
+    position: fixed;
+    top: 50%;
+    transform: translate(0px , -50%);
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 190px;
+    left: -49px;
+    transition:all .7s ease-in-out;
+}
+article .article:hover{
+    left: 0px;
+}
+article .article .rightArticle , article .article .closeIcon{
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article .article a  span{
+    line-height: 190px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+article .article .icon {
+    font-size: 35px;
+    border-radius: 50%;
+}
+article .article .closeIcon a {
+    font-size: 28px;
+    color: white;
+}
+article .article .closeIcon a:hover{
+    color: var(--Red);
+}
+/* End article */
+/* Start section one (food lover history) */
+.container .Lover_content h2{
+    text-align: center;
+    margin-top: 70px;
+}
+.container .Lover_content .p1 , .spacial_offers .container .p1{
+    text-align: center;
+    font-size: 12px;
+}
+.container .Lover_content .empty_one{
+    width: 200px;
+    height: 2px;
+    background-color: var(--Primary);
+    margin: auto;
+    margin-top:15px;
+}
+.container .Lover_content .empty_one:hover{
+    width: 300px;
+    transition: 1s ease-in-out;
+}
+.container .Lover_content .textAndImgs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+.container .Lover_content .textAndImgs .text{
+    width: 500px;
+    padding: 5px;
+}
+
+.container .Lover_content .textAndImgs button{
+    border-radius: 9px;
+    background-color: var(--Black);
+    color: var(--Grey);
+    padding: 5px;
+    width: 130px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0;
+    margin-bottom: 30px;
+}
+/* End section one (food lover history) */
+/* Start section two (spacial offers) */
+.spacial_offers .container{
+    margin-top: 100px;
+}
+.spacial_offers .container h2{
+    text-align: center;
+    padding-top: 100px;
+    color: var(--Primary);
+}
+.spacial_offers .container .empty-two{
+    width: 200px;
+    height: 2px;
+    margin: auto;
+    background-color: var(--Primary);
+}
+.spacial_offers .container .empty-two:hover{
+    width: 300px;
+    transition: 1s ease-in-out;
+}
+.spacial_offers .container .pasta{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.spacial_offers .container .pasta .kind {
+    margin: 70px auto;
+    text-align: center;
+    min-width: 250px;
+    width: 250px;
+}
+.spacial_offers .container .pasta .kind .pricee{
+    color: var(--Primary);
+}
+.spacial_offers .container .pasta .kind img{
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+}
+.spacial_offers .container .pasta .kind h3{
+    padding: 30px 0px 20px 0px;
+}
+.spacial_offers .container .pasta .kind  p{
+    font-size: 12px;
+}
+/* End section two (spacial offers) */
+/* Start section (Spacail Menu) */
+.spacial_menu{
+    margin-top: 100px;
+}
+.spacial_menu h2{
+    text-align: center;
+}
+.spacial_menu p{
+    text-align: center;
+    font-size: 13px;
+    color: gray;
+}
+.spacial_menu .empty_menu{
+    width: 200px;
+    height: 1px;
+    background-color:orange;
+    margin: auto;
+}
+.spacial_menu .empty_menu:hover{
+    width: 300px;
+    transition: 1s ease-in-out;
+}
+.all_products{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.a_product{
+    width: 45%;
+    /* height: 120px;                                                     delet  */
+    display: flex;
+    align-items: center ;
+    margin-top: 50px;
+}
+.all_products .a_product .right_img img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.all_products .a_product .left_text{
+    width: 100000px;
+}
+
+.all_products .a_product .left_text .a_product_top{
+    margin-bottom: -15px;
+    display: flex;
+    justify-content: space-between;
+}
+.all_products .a_product .left_text .a_product_top p{
+    color: orange;
+}
+.a_product_top ,.a_product_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.a_product_bottom p{
+    margin-right: 10px;
+}
+.a_product_bottom button{
+    min-width: 90px;
+    padding: 3px;
+    background-color: orange;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+    display: block;
+}
+
+/* End section (Spacail Menu) */
+/* Start section (Time Line)  */
+.timeLine{
+    background-image: url(../images/daytime_bg.jpeg);
+    background-size:cover;
+    background-position: center;
+    margin-top: 100px;
+}
+.timeLine .content_timeLine{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.timeLine .content_timeLine .breakFast  {
+    width: 240px;
+    text-align: center;
+    color: white;
+}
+.timeLine .content_timeLine img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin:50px auto 0px;
+}
+.timeLine .content_timeLine  h3{
+    padding-top: 20px ;
+}
+.timeLine .content_timeLine  p{
+    font-size: 13px;
+    padding-bottom: 70px;
+}
+/* End section (Time Line)  */
+/* Start Section (our food) */
+.OurFood h2{
+    color: white;
+    text-align: center;
+    padding: 100px 0px 20px 0px;
+}
+.OurFood .imgOurfood {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+.OurFood .imgOurfood .img{
+    width: 280px;
+    height: 150px;
+    margin:20px auto 0PX;
+}
+.OurFood .imgOurfood .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+/* End Section (our food) */
+/* Start footer (last section)  */
+.allInfo {
+    margin: 100px auto 50px;
+    width: 75%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.allInfo .info{
+    width: 30%;
+}
+.allInfo .info .address h2{
+    padding-bottom: 18px;
+}
+.allInfo .info .address .icon{
+    color: var(--Red);
+    font-size: 21px;
+    line-height: 32px;
+}
+.allInfo .info .address span{
+    line-height: 32px;
+}
+.allInfo .info  .workingHoures h2{
+    padding: 21px 0px;
+}
+.allInfo .info .follow h2{
+    padding: 21px 0px;
+}
+.allInfo .info .follow .icon{
+    font-size: 35px;
+    color: var(--Black);
+    border-radius: 50%;
+}
+.allInfo .form {
+    width: 55%;
+}
+.allInfo .form input , .allInfo .form textarea{
+    display: block;
+    border: none;
+    outline: none;
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 17px ;
+    width: 100%;
+    border-radius: 4px;
+}
+.allInfo .form button{
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background-color: #ddd;
+    color: rgb(36, 36, 36);
+    border-radius: 6px;
+}
+.allInfo .form button:hover{
+    background-color: #f3d57c;
+    transform: scale(1.1);
+}
+/* End footer (last section)  */
+/* Start footer */
+footer p{
+    padding: 5px ; 
+    text-align: center;
+    background-color: var(--Black);
+    color: white;
+}
+/* End footer */
+
+/* +++++++++++++++++++++++++++++++++++++++ max width = 1100px ++++++++++++++++++++++++++ */
+@media(max-width : 1170px){
+    /* Start section one (food lover history) */
+    .container .Lover_content .textAndImgs .text{
+        width: 100%;
+        margin: auto;
+    }
+    .container .Lover_content .textAndImgs .imgs{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .container .Lover_content .textAndImgs .imgs img{
+        width: 100%;
+    }
+    /* End section one (food lover history) */
+    /* Start section (Spacail Menu) */
+    .all_products{
+        width: 80%;
+        margin: auto;
+    }
+    .a_product{
+        width: 100% ;
+        margin-top: 60px; 
+    
+    }
+    /* End section (Spacail Menu) */
+    /* Start Section (our food) */
+    .OurFood .imgOurfood {
+        width: 90%;
+    }
+    /* End Section (our food) */
+    /* Start footer (last section)  */
+    .allInfo .info{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .allInfo .form{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    /* End footer (last section)  */
+
+}
+/* +++++++++++++++++++++++++++++++++++++++++++ max-width = 768px +++++++++++++++++++++++++++++++++++++ */
+@media(max-width : 768px){
+    /* Srart Header */
+    .links li{
+        height: 35px;
+    }
+    /* End Header */
+   /* Start section (Spacail Menu) */
+    .all_products{
+        width: 100%;
+    }
+    .a_product{
+        padding: 4px 10px;
+    }
+    /* End section (Spacail Menu) */
+    /* Start section (Time Line)  */
+    
+    .timeLine .content_timeLine .breakFast {
+        margin:-40px auto ;
+        padding-top: 10px;
+    }
+    /* End section (Time Line)  */
+}
+@media(max-width : 567px){
+    /* Start section (Time Line)  */
+    .timeLine .content_timeLine .breakFast{
+        padding-top: 50px
+    }
+    /* End section (Time Line)  */
+     /* Start Section (our food)  */
+     .container .Lover_content .textAndImg .img{
+        margin: auto;
+        text-align: center;
+    }
+    .container .Lover_content .textAndImgs .img img{
+        text-align: center;
+    }
+    /* End Section (our food)  */
+    /* Start footer (last section)  */
+    .allInfo .form{
+        width: 90%;
+    }
+    /* End footer (last section)  */
+
+}
+@media(max-width : 380px){
+    /* Strat Header */
+    .navbar .container-fluid .navbar-brand img{
+        margin-left: 15px;
+    }
+    /* End Header */
+}
